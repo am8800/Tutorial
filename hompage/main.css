@@ -1,0 +1,81 @@
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+html{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+}
+#header {
+  text-align: center;
+}
+#header h1 {
+  color: #252122;
+  font-weight: 900;
+  font-size: 2.5em;
+  letter-spacing: -0.035em;
+  margin: 0 0 1em 0;
+}
+#nav > ul {
+  margin: 0;
+}
+
+  #nav > ul > li {
+    display: inline-block;
+    font-style: italic;
+    margin: 0 0.35em 0 0.35em;
+  }
+
+    #nav > ul > li > ul {
+      display: none;
+    }
+
+    #nav > ul > li > a {
+      border-radius: 5px;
+      color: #5d5d5d;
+      text-decoration: none;
+      padding: 0.6em 1.2em 0.6em 1.2em;
+      -moz-transition: background-color .25s ease-in-out;
+      -webkit-transition: background-color .25s ease-in-out;
+      -ms-transition: background-color .25s ease-in-out;
+      transition: background-color .25s ease-in-out;
+      outline: 0;
+    }
+
+    #nav > ul > li:hover > a, #nav > ul > li.active > a {
+      background: #f3f3f3;
+    }
+
+    #nav > ul > li.homepage > a {
+      background: #d52349;
+      color: #fff !important;
+      font-weight: 700;
+    }
+/*body*/
+#body-wrapper{
+  text-align: center;
+  margin: 2em;
+}
+#body-wrapper > ul > li{
+  display: inline-block;
+  font-style: italic;
+  margin: 2em;
+}
+#body-wrapper .leftphoto{
+  /*width: auto;height: auto;*/
+  background-size: contain;
+  max-width: 500px;
+  max-height: 400px;
+}
+#body-wrapper .rightphoto{
+/*width: auto;height: auto;*/
+background-size: contain;
+  max-width: 500px;
+  max-height: 400px;
+}
