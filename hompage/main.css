@@ -98,3 +98,9 @@ background-size: contain;
   max-width: 500px;
   max-height: 400px;
 }
+#footer{text-align: center;}
+
+#footer>p { color : white;}
+#footer.t { color : white; font-size : 30px; }
+#footer>h1 { color : white;}
+#footer { background-color : black;}
