@@ -15,31 +15,32 @@ body {
 #header {
   text-align: center;
 }
-/*#header>img.trademark{
-  position: absolute;
-  right: 3em;
-  top: 3em;
-}*/
 #header h1 {
   color: #252122;
   font-weight: 900;
   font-size: 2.5em;
   letter-spacing: -0.035em;
   margin: 0 0 1em 0;
-
 }
 #nav > ul {
-  margin: 0;
+  margin: 3em;
+  text-align: center;
+  list-style-type: none;
 }
-
-  #nav > ul > li {
+#nav > ul > li {
     display: inline-block;
     font-style: italic;
-    margin: 0 0.35em 0 0.35em;
+    margin: 0 1em 0em 1em;
+    position: relative;
   }
-
-    #nav > ul > li > ul {
-      display: none;
+#nav > ul > li > ul {
+      position:absolute;     /* html의 flow에 영향을 미치지 않게 absolute 설정 */
+        height: 0px;            /* 초기 높이는 0px로 설정 */
+        overflow: hidden;       /* 실 내용이 높이보다 커지면 해당 내용 감춤 */
+        transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(기본) */
+        -webkit-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 크롬/사파라ㅣ) */
+        -moz-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 파폭) */
+        -o-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 오페라) */
     }
 
     #nav > ul > li > a {
@@ -51,16 +52,28 @@ body {
       -webkit-transition: background-color .25s ease-in-out;
       -ms-transition: background-color .25s ease-in-out;
       transition: background-color .25s ease-in-out;
-      outline: 0;
+      outline: 1;
     }
-
-    #nav > ul > li:hover > a, #nav > ul > li.active>a {
+  #nav > ul > li > ul >li{
+    border-radius: 5px;
+    color: #5d5d5d;
+    text-decoration: none;
+    padding: 0.6em 1.2em 0.6em 1.2em;
+    border: solid 1px black;
+    margin-top: -1px
+  }
+#nav > ul > li > ul >li>a{
+  text-decoration: none;
+}
+    #nav > ul > li:hover >a{
       background: #f3f3f3;
     }
-    #nav > ul > li > a>li {
-      background: #d52349;
-      color: #fff !important;
-      font-weight: 700;
+    #nav > ul > li:hover > ul{
+      position: absolute;
+      background: #f3f3f3;
+      width: 160px;
+      height: auto;
+      padding: 0.5em;
     }
 
 /*body*/
